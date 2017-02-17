@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/tvNextPager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="Next Page"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvPrePager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_chevron_left_black_24dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="Pre Page"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvCenterPager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Center Pager"
+                android:textColor="@android:color/black" />
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="30dp"
+            android:paddingEnd="@dimen/card_padding50"
+            android:paddingLeft="@dimen/card_padding50"
+            android:paddingRight="@dimen/card_padding50"
+            android:paddingStart="@dimen/card_padding50" />
+
+        <com.example.asiantech.demoviewpagervideo.views.CirclePageIndicator
+            android:id="@+id/circleViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

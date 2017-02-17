@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.asiantech.demoviewpagervideo.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/tvNextPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Next Page"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvPrePager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ic_chevron_left_black_24dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Pre Page"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvCenterPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Center Pager"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager1"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingBottom="30dp"
+        android:paddingEnd="@dimen/card_padding50"
+        android:paddingLeft="@dimen/card_padding50"
+        android:paddingRight="@dimen/card_padding50"
+        android:paddingStart="@dimen/card_padding50" />
+
+    <com.example.asiantech.demoviewpagervideo.views.CircleIndicatorView
+        android:id="@+id/circleViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="48dp"
+        app:ci_animator="@animator/indicator_animator"
+        app:ci_animator_reverse="@animator/indicator_animator_reverse"
+        app:ci_drawable="@drawable/white_radius"
+        app:ci_height="15dp"
+        app:ci_margin="5dp"
+        app:ci_width="15dp" />
+</LinearLayout>
